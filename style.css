@@ -1,0 +1,1349 @@
+/* STYLE- BY ORDER OF APPEARANCE MOSTLY... */
+
+body {
+    background-color: #440864;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.1em;
+    margin: 0;
+    color: white;
+}
+
+h1, h2 {
+    line-height: 1em;
+}
+
+a {
+    font-weight: 700;
+    color: azure;
+}
+
+/* TOP NAVIGATION */
+.grid_1 {
+    display: grid;
+    grid-template-columns: repeat(19, 1fr);
+    position: relative;
+}
+
+header {
+    grid-column: 1 / span 19;
+    grid-row: 1;
+    z-index: 2;
+    background-color: rgba(36, 7, 51, 0.95);
+    z-index: 100;
+
+    /* GRID INSIDE A GRID */
+    display: grid;
+    grid-template-columns: repeat(19, 1fr);
+    grid-template-rows: 55% 1fr;
+    position: relative;
+}
+
+.navbar {
+    margin:0;
+    font-size: 14px;
+    padding: 1.5%;
+    padding-bottom: 0;
+    grid-column: 1 / span 19;
+}
+
+.main-header { /* ALSO A BUTTON */
+    margin: 0;
+    font-size: 35px;
+    line-height: .9em;
+    font-weight: 900;
+    padding-right: 15%; /* keeps it from hitting menu if tab changes size*/
+    z-index: 7;
+}
+
+ul{
+    padding:0;
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    text-align: left;
+    font-size: 12px;
+    padding-right: 5%;
+    line-height:1.5em;
+    z-index:10;
+}
+
+.navbar li:nth-of-type(4){ /* remove padding from last item */
+    padding-right: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.current a {
+    color: #00ffff;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #808080;
+    font-weight: bold;
+}
+
+.bold {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.mini_bold {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* right side menu */
+
+.glos {
+    margin: 0;
+    text-align: center;
+    grid-column: 14 / span 19;
+    grid-row: 1;
+    text-align: right;
+    z-index:100;
+
+    float:right;
+}
+
+.glos li {
+    display: inline-block;
+}    
+
+/* DROPDOWN MENU */
+
+.dropbtn {
+  padding-right: 30px;
+  padding-bottom:5px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-size:inherit;
+  font-weight: bold;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color: #808080;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 7px 16px;
+  display: block;
+  text-align: left;
+}
+
+/* menu COLORS */
+.obs_head {
+    background-color:rgba(255, 216, 0, 1); /* YELLOW */
+}
+.obs_cont {
+    background-color: rgba(255, 216, 0, 0.4);
+}
+.dark_head {
+    background-color: rgba(0, 255, 255, 0.50); /* BLUE */
+}
+.dark_cont {
+    background-color: rgba(0, 255, 255, 0.3);
+}
+.cd_1_head {
+    background-color: rgba(100, 75, 255, .7); /* VIOLET */
+}
+.cd_1_cont {
+    background-color: rgba(100, 75, 255, .4);
+}
+.cd_2_head {
+    background-color: rgba(68, 8, 100, .63); /* PURPLE */
+}
+.cd_2_cont {
+    background-color: rgba(68, 8, 100, .4);
+}
+.later_head {
+    background-color: rgba(210, 150, 100, 1); /* DARK ORANGE!?!? */
+}
+.later_cont {
+    background-color: rgba(210, 150, 100, .6);
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* TOP MAIN MAP */
+.image-stack {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+}
+
+.image-stack__item--bottom {
+    overflow:hidden;
+}
+
+.image-stack__item--top {
+    grid-row: 1; /*  must be on the same row as the other image  */
+    grid-column: 1 / span 12;
+    padding-top: 0%; /* this pushes the image down, and keeps it proportional as it resizes  */
+    z-index: 2; /* make this image render on top of the bottom */
+}
+
+.rectangle {
+    height: 17%;
+    background-color: #9c9a9d;
+    width:20%;
+}
+
+.image-stack__item--white {
+    grid-row: 1; /*  must be on the same row as the other image  */
+    grid-column: 1 / span 12;
+    padding-top: 0%; /* this pushes the image down, and keeps it proportional as it resizes  */
+    z-index: 2; /* make this image render on top of the bottom */
+}
+
+.image-stack__item--cmb {
+    grid-row: 1; /*  must be on the same row as the other image  */
+    grid-column: 1 / span 5;
+    padding-top: 0%; /* this pushes the image down, and keeps it proportional as it resizes  */
+    z-index: 2; /* make this image render on top of the bottom */
+    clip-path: ellipse(95% 95% at center);
+}
+
+.image-stack__item--web {
+    clip-path: ellipse(60% 53% at center);
+    grid-row: 1; /*  must be on the same row as the other image  */
+    grid-column: 1 / span 10;
+    padding-top: 0%; /* this pushes the image down, and keeps it proportional as it resizes  */
+    z-index: 2; /* make this image render on top of the bottom */
+}
+
+.image-stack__item--stars_dim {
+    clip-path: ellipse(69.5% 82% at 69% 83%);
+    grid-row: 1; /*  must be on the same row as the other image  */
+    grid-column: 1 / span 12;
+    padding-top: 0%; /* this pushes the image down, and keeps it proportional as it resizes  */
+    z-index: 2; /* make this image render on top of the bottom */
+    filter: brightness(400%);
+    opacity: .25;
+}
+
+.image-stack__item--stars {
+    clip-path: ellipse(98% 130% at 100% 139%);
+    grid-row: 1; /*  must be on the same row as the other image  */
+    grid-column: 1 / span 12;
+    padding-top: 0%; /* this pushes the image down, and keeps it proportional as it resizes  */
+    z-index: 2; /* make this image render on top of the bottom */
+    opacity: .4;
+    filter: brightness(250%);
+}
+
+.image-stack__item--stars_bright {
+    clip-path: ellipse(160% 200% at 165% 205%);
+    grid-row: 1; /*  must be on the same row as the other image  */
+    grid-column: 1 / span 12;
+    padding-top: 0%; /* this pushes the image down, and keeps it proportional as it resizes  */
+    z-index: 2; /* make this image render on top of the bottom */
+    opacity: .4;
+    filter: brightness(600%);
+}
+
+.image-stack__item--earth {
+    clip-path: circle(21% at 50% 80%);
+    grid-row: 1; /*  must be on the same row as the other image  */
+    grid-column: 10 / span 12;
+    padding-top: 150%; /* this pushes the image down, and keeps it proportional as it resizes  */
+    z-index: 3; /* make this image render on top of the bottom */
+    opacity: 1;
+}
+
+.image-stack__item--wave {
+    grid-row: 1; /*  must be on the same row as the other image  */
+    grid-column: 3 / 11;
+    margin: 40%;
+    /* this pushes the image down, and keeps it proportional as it resizes  */
+    z-index: 2; /* make this image render on top of the bottom */
+    filter: invert(100%);
+    width:90%;
+    transform: rotate(35deg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 5%;
+}
+
+.image-stack__item--wave2 {
+    grid-row: 1; /*  must be on the same row as the other image  */
+    grid-column: 2 / span 9;
+    margin: 35%; /* this pushes the image down, and keeps it proportional as it resizes  */
+    z-index: 6; /* make this image render on top of the bottom */
+    width: 60%;
+    transform: rotate(17deg);
+    height: 4%;
+    background-size: cover;
+    background-position: bottom;
+    position: absolute;
+    top: 25%;
+    left:7%;
+    z-index: 5;
+}
+
+.image-stack__item--bottom {
+    grid-column: 1 / -1;
+    grid-row: 1; /* make this image be on the same row */
+}
+
+#boxes {
+    grid-column: 1 / span 20;
+    grid-row: 2 / span 8;
+    position: relative;
+    font-size: 25px;
+    line-height: 1em;
+    overflow: hidden;
+}
+
+#boxes img{
+    display: block;
+    width: 100%;
+}
+
+/* BUTTONS ON TOP MAIN MAP */
+.main-idea{
+    font-size: 36px;
+    line-height: 1em;
+    padding-left: 5px;
+    border-left: 6px solid white;
+    opacity:1;
+}
+
+.main-idea_big { /* cosmic dawn overlay on main map */
+    font-size: 110px;
+    line-height: 1em;
+    opacity: 1;
+    font-weight: bold;
+    color: rgba(100, 100, 100, .4);
+}
+
+/* MAIN PAGE TEXT INTRODUCTION */
+.intro_1 {
+    margin-top: -10%;
+    padding: 6%;
+    grid-row: 10;
+    grid-column: 1 /span 9;
+}
+
+.intro_2 {
+    margin-top: -10%;
+    padding: 6%;
+    grid-row: 10;
+    grid-column: 10 /span 20;
+}
+
+/* MAIN PAGE SECOND MAP */
+.map_size {
+    grid-column: 5/15;
+    grid-row: 2
+}
+
+.main_map_2 {
+    width: 100%;
+    left:50%;
+}
+
+/*  THE UNIVERSE A STORY  */
+.contents {
+    margin: 0;
+    font-size: 85px;
+    padding: 4%;
+    grid-column: 1 / span 20;
+    z-index: 2;
+    background-color: rgba(36, 7, 51, 0.95);
+}
+
+.button {
+    margin:0;
+    opacity: 0;
+}
+
+.button:hover{
+    opacity:.3;
+}
+
+.full_width_oval {
+    grid-column: 4/ 14;
+    margin:0;
+}
+
+/* SCIENCE PAGES BELOW */
+
+/* PAGE PICTURE-TEXT OVERLAY */
+.page {
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1em;
+    position:relative;
+    grid-column: 1 / span 20;
+    grid-row:2 / span 7;
+    z-index:1;
+}
+
+.page_title {
+    padding-top: .5%;
+    margin-top:6%;
+    line-height: .9em;
+    font-size: 7.3vw;
+    font-weight: 800;
+    position: relative;
+    grid-column: 2 / span 18;
+    grid-row: 3;
+    line-height: .95em;
+    z-index: 3;
+}
+
+.page_summary {
+    grid-column: 4 / span 15;
+    margin-top:-2%;
+    grid-row: 4;
+    z-index: 2;
+    font-size: 25px;
+    line-height: 1.2em;
+}
+
+.box { /* just for the padding around the page summary */
+    padding: 2.5%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.img_cred {
+    position:relative;
+    line-height: 1.2em;
+    text-align: right;
+    grid-row: 5;
+    grid-column: 1 / span 20;
+    z-index: 3;
+    padding:2%;
+}
+
+/* PAGE BEFORE / PAGE AFTER NAVIGATION */
+.page_nav {
+    margin: 0;
+    line-height: 1.1em;
+    padding: 2% 3% 2% 3%;
+    font-size: 18px;
+    background-color: rgba(0, 255, 255, 0.3);
+    grid-column: 1 / span 20;
+    z-index: 2;
+}
+
+/* PAGES TEXT */
+h1 {
+    margin: 0;
+}
+
+.main-col {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 6%;
+    position: relative;
+    grid-column: 1 / span 15;
+
+    /* GRID INSIDE A GRID */
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+}
+
+.obs_col {
+    grid-column: 1 / span 19;
+
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+}
+
+.in_text_image_left {
+    grid-column: 1 / 6;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 6%;
+    margin-top: 4%;
+}
+
+.in_text_image_right {
+    grid-column: 11 / 16;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 6%;
+    margin-top: 4%;
+}
+
+.in_text_header_right {
+    grid-column: 1 / 16;
+    margin-top: 4%;
+    text-align: right;
+}
+
+.in_text_header_left {
+    grid-column: 1 / 16;
+    margin-top: 4%;
+    text-align: left;
+}
+
+.text_right {
+    grid-column: 6 / 16;
+    text-align: left;
+    padding: 3.5%;
+    margin-top: 4%;
+}
+
+.text_left {
+    grid-column: 1 / 11;
+    text-align: right;
+    padding: 3.5%;
+    margin-top: 4%;
+}
+
+.img_cred_body { /* Image credit */
+    font-size:8.5pt;
+}
+
+.main-col li {
+    padding-bottom: 1.5%;
+}
+
+/* OBSERVATIONS SIDEBAR */
+.sidebar {
+    position: relative;
+    grid-column: 16 / span 20;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.blurb { /* telescope wrapper */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 17%;
+}
+
+.blurb img{
+    margin-top:6%;
+}
+
+.telescope_button {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+}
+
+.telescope_img {
+    width: 100%;
+    overflow: hidden;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.telescope_img img{
+    top: 50%; /* top, left, transform trick to vertically and horizontally center image */
+    left: 50%;
+}
+
+.telescope_title {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 15%;
+}
+
+.telescope_title h3{
+     background-color: rgba(3, 1, 1, .5);
+     margin:5%;
+     padding:6%;
+     line-height:16pt;
+}
+
+.tiny_text { /* tiny text below telescope image */
+    font-size: 9px;
+}
+
+.vocab {
+    padding: 17%;
+}
+
+.vocab li{
+    padding: 6px;
+}
+
+/* Observation PAGE */
+.main-col-obs {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 0% 9% 2% 4%;
+}
+
+/* Expolration / deeper dive box */
+.dive {
+    padding: 4.5% 3.5% 4.5% 3.7%;
+    background-color: rgba(255, 255, 255, 0.185);
+    font-size: 4.6vw;
+    font-weight:bold;
+    line-height: .9em;
+}
+
+.grid_3 { /* GRID 3 COME BEFORE GRID 2 ... I KNOW ITS CONFUSING */
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    position:relative;
+}
+
+.video, .video_1, .video_2, .video_3, .video_4 {
+    /* position: absolute; */
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.16);
+    border: none;
+    padding: 3%;
+    grid-column: 1 / span 20;
+    padding-bottom: 5px;
+}
+
+.video_1{
+    grid-row:1;
+}
+
+.video_2 {
+    grid-row: 3;
+}
+
+.video_3{
+    grid-row:5;
+}
+
+.video_4 {
+    grid-row: 7;
+}
+
+.video_size {
+    width:400px;
+}
+
+.explore {
+    padding: 0% 0% 0% 0%;
+    background-color: rgba(255, 255, 255, 0.16);
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+
+.vid_text, .vid_text_1, .vid_text_2, .vid_text_3, .vid_text_4 {
+    padding: 3%;
+    grid-column: 1 / span 20;
+    padding-left: 470px;
+    grid-row: 1;
+}
+
+.vid_text_2 {
+    grid-row: 3;
+}
+
+.vid_text_3 {
+    grid-row: 5;
+}
+
+.vid_text_4 {
+    grid-row: 7;
+}
+
+.grid_3 li {
+    padding-top: 1%;
+    padding-left: 2%;
+}
+
+/* GRID 2 */
+.grid_2 {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    position: relative;
+}
+
+.links {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    position: relative;
+    line-height: 1.35em;
+    grid-column: 1 / span 20;
+    grid-row: 1 / span 4;
+}
+
+.links a, .sidebar a, .idea_contain a, .video a{
+    border-bottom: 1px solid white;
+}
+
+
+/* GLOSSARY PAGE */
+
+.gloss_title {
+    padding-top: 6%;
+    padding-left: 4%;
+    font-size: 7.3vw;
+    font-weight: 800;
+}
+
+.glossary_list {
+    padding: 3% 6% 0% 6%;
+    line-height:1.25em;
+}
+
+.glossary_list li{
+    padding-bottom: 3%;
+    text-indent: -2em;
+    padding-left: 2em;
+
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     position: relative;
+}
+
+.glos_def {
+    grid-column: 1/3;
+    grid-row: 1;
+    margin-right: 10%;
+    margin-bottom:10%;
+    margin-left:0;
+}
+
+.glos_img_cred {
+    font-size:11px;
+    line-height:1.3em;
+    text-align: right;
+    grid-column: 2/3;
+    grid-row: 2;
+    margin-right:5%;
+}
+
+.glos_img {
+    grid-column:3/span 5;
+    grid-row:1/3;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*  RESEARCH PAGES  */
+.group_title {
+    margin-bottom:2%;
+}
+.group_mem_list {
+    position: relative;
+    margin: 7%;
+}
+
+.group_wrap {
+    overflow: hidden;
+    margin-bottom: 4%;
+}
+
+.person {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 250px;
+    position: relative;
+
+    width: 250px;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    overflow:hidden;
+}
+
+.person_img {
+    grid-row: 1;
+    grid-column: 1;
+    bottom: 0%;
+}
+
+.person_img img{
+    width:100%;
+    bottom:0%;
+}
+
+.person_img img{
+    top:50%;
+    left:50%;
+}
+
+.person_name {
+    grid-row: 1;
+    grid-column: 1;
+    margin: 7%;
+    margin-top: 68%;
+    z-index: 10;
+    background-color: rgba(1, 1, 1, .5);
+    padding: 2%;
+    line-height:1em;
+}
+
+.affil {
+    font-size: 12px;
+    line-height: .8em;
+}
+
+.web {
+    font-size: 12px;
+    line-height: .8em;
+}
+
+/* FOOTER */
+.mission {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 12%;
+    line-height: 1.2em;
+    position:relative;
+    grid-column: 1 / span 10;
+    grid-row: 5 / 8;
+}
+
+.creation {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 12%;
+    position: relative;
+    line-height: 1.2em;
+    grid-column: 11 / span 20;
+    grid-row: 5 / 8;
+}
+
+.creation ul {
+    display: inline-block;
+}
+
+.creation_top {
+    padding-bottom: 2%;
+}
+
+.nasa, .ness, .nsf, .ucla {
+    grid-row: 8;
+}
+
+.nasa {
+    width:13%;
+}
+
+.ness{
+    width:20%
+}
+
+.nsf {
+    width:11.5%
+}
+
+.ucla {
+    height: 50px;
+}
+
+.copyright {
+    padding: 2%;
+    background-color: rgba(0, 0, 0, 0.9);
+    grid-column: 1 / span 20;
+    grid-row: 8;
+    text-align: center;
+}
+
+
+
+/*  #################   MEDIA QUERIES  #################  */
+
+/* medium devices */
+@media only screen and (max-width: 960px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* HEADER QUERIES */
+    .main-header {
+        font-size: 30px;
+    }
+
+    .main-idea, .main-idea_mini {
+        font-size: 30px;
+        border-left: 2px solid white;
+        padding-left: 2px;
+    }
+
+    .main-idea_mini {
+        font-size: 15px;
+        line-height: 1.2em;
+    }
+
+    .main-idea_big { /* cosmic dawn overlay on main map */
+        font-size: 90px;
+    }
+
+    .navbar li {
+        padding-right: 10%;
+    }
+
+    .contents { /* home page The Universe: A Story */
+        font-size: 50px;
+        padding: 3%;
+    }
+
+    .bold { /* custom bold for spans*/
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .page_nav { /* Before/after page navigation*/
+        font-size: 16px;
+    }
+
+    /* MAIN CONTENT QUERIES */
+    .main-col {
+        grid-column: 1 / span 19;
+        padding:4%;
+    }
+
+    .page_summary {
+        grid-column:2/span 17;
+        font-size: 20px;
+    }
+
+    .img_cred_body {
+        line-height: 1.4em;
+        font-size: 7.5pt;
+    }
+
+    /* SIDEBAR MOVES TO BOTTOM, no longer sidebar*/
+    .sidebar {
+        grid-column: 1 / span 19;
+    }
+
+    .telescope_button {
+        width:30%;
+        float:left;
+        padding-right:3%;
+    }
+
+    .telescope_img {
+        grid-column: 1;
+    }
+
+    .telescope_title {
+        grid-column: 1;
+        margin-top: 20%;
+    }
+
+    .blurb { /* telescope wrapper */
+        padding: 6%;
+    }
+
+    .blurb p {
+        float:left;
+        grid-column: 2 /span 3;
+    }
+
+    .vocab li {
+        display: inline-block;
+        padding-right: 4%;
+    }
+
+    .vocab {
+        clear: both;
+        padding: 6%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+
+    .links {
+        padding: 6%;
+    }
+
+    /* Exploration box */
+    .video_size {
+        padding-top: 25%;
+        width: 300px;
+    }
+
+    .vid_text {
+        padding-left: 360px;
+    }
+
+    /* FOOTER */
+
+    .nasa, .nsf {
+        width: auto;
+        height: 36px;
+    }
+
+    .ness {
+        width: auto;
+        height: 36px;
+    }
+
+    .ucla {
+        height: 38px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 700px) {
+    body {
+        font-size: 12.5px;
+        line-height:1.15em;
+    }
+
+    /* HEADER QUERIES */
+    .main-header { /* ALSO A BUTTON */
+        font-size: 24px;
+    }
+
+    .main-idea, .main-idea_mini {
+        font-size: 16px;
+        border-left: 2px solid white;
+        padding-left: 2px;
+    }
+
+    .main-idea_mini {
+        font-size:12px;
+        line-height:1em;
+    }
+
+    .glos li {
+        display: block;
+    }
+
+    .main-idea_big { /* cosmic dawn overlay on main map */
+        font-size: 60px;
+    }
+
+    .contents { /* home page The Universe: A Story */
+        font-size: 30px;
+        padding: 3%;
+    }
+
+    .map_size {
+        grid-column: 3/18;
+    }
+
+    .full_width_oval {
+        width:80%;
+    }
+
+    .bold { /* custom bold for spans*/
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .page_nav {
+        font-size: 14px;
+    }
+
+    /* MAIN CONTENT QUERIES */
+    .page_summary {
+        font-size: 18px;
+    }
+
+    .img_cred_body {
+        line-height:1.2em;
+        font-size: 6.5pt;
+    }
+
+    .telescope_title {
+        margin-top: 10%;
+        font-size: 11px;
+    }
+
+    /* Exploration box */
+    .video_size {
+        padding-top:32%;
+        width: 220px;
+    }
+
+    .video_1 {
+        padding: 4%;
+        grid-row: 2;
+    }
+
+    .video_2 {
+        padding: 4%;
+        grid-row: 4;
+    }
+
+    .video_3 {
+        padding: 4%;
+        grid-row: 6;
+    }
+
+    .video_4 {
+        padding: 4%;
+        grid-row: 8;
+    }
+
+    .vid_text_1, .vid_text_2, .vid_text_3, vid_text_4 {
+        padding: 4%;
+    }
+
+    .vid_text {
+        padding-left: 255px;
+    }
+}
+
+/* NOT a media query */
+/*     MAIN TEXT responsive grid   */
+.in_text_image_left_1, .in_text_image_left_2, .in_text_image_right_3, .in_text_image_left_5, .in_text_image_right_7, .in_text_image_left_9 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 4%;
+}
+
+.in_text_image_left_1, .in_text_image_left_2, .in_text_image_left_5, .in_text_image_left_9 {
+    margin-right: 6%;
+    grid-column: 1 / 6;
+}
+
+.in_text_image_left_1, .text_right_1 { /* first row */
+    grid-row: 1;
+}
+
+.in_text_image_left_2, .text_right_2 { /* only on the larger galaxies page */
+    grid-row: 3;
+}
+
+.in_text_image_right_3, .text_left_3 { /* second row (usually) but sometimes third row  */
+    grid-row: 5;
+}
+
+.in_text_image_left_5, .text_right_5 { /* third row (usually) */
+    grid-row: 9;
+}
+
+
+in_text_header_right {
+    margin-left: 6%;
+    grid-column: 1/16;
+    grid-row: 3;
+}
+
+.in_text_image_right_3, .in_text_image_right_7 {
+    margin-left: 6%;
+    grid-column: 11 / 16;
+}
+
+.in_text_image_right_7, .text_left_7 { /* forth row (usually) */
+    grid-row: 13;
+}
+
+
+.in_text_image_left_9, .text_right_9 { /* fifth row */
+    grid-row: 17;
+}
+
+.text_right_1, .text_right_2, .text_left_3, .text_right_5, .text_left_7, .text_right_9 {
+    padding: 3.5%;
+    margin-top: 4%;
+}
+
+.text_right_1, .text_right_2, .text_right_5, .text_right_9 {
+    grid-column: 6 / 16;
+    text-align: left;
+}
+
+.in_text_header_right_6 { /* spin flip page and cosmic noon page only */
+    margin-top: 4%;
+    grid-column: 1 / 16;
+    text-align: right;
+    grid-row: 11;
+}
+
+.text_left_3, .text_left_7 {
+    grid-column: 1 / 11;
+    text-align: right;
+}
+
+/* for mobile phones */
+@media only screen and (max-width: 560px) {
+    .main-header { /* ALSO A BUTTON */
+        font-size: 20px;
+    }
+
+    .navbar li{
+        display:block;
+    }
+
+    .dropbtn {
+        padding-right:12px;
+    }
+
+    .dropdown-content {
+        margin-left: -75px;
+    }
+
+    .main-idea_big { /* cosmic dawn overlay on main map */
+        font-size: 42px;
+        line-height: 1em;
+        opacity: 1;
+        font-weight: bold;
+        color: rgba(100, 100, 100, .4);
+    }
+
+    .intro_1 {
+        margin-top: -8%;
+        grid-column: 1 / span 20;
+    }
+
+    .intro_2 {
+        padding-top:10%;
+        grid-column: 1 / span 20;
+        grid-row: 11;
+    }
+
+    .map_size { /* second main map home page */
+        grid-column: 1/20;
+    }
+    
+    .page_summary {
+        font-size:16px;
+    }
+
+    .img_cred {
+        padding-top:40%;
+    }
+
+    .text_right_1, .text_right_2, .text_left_3, .text_right_5, .text_left_7, .text_right_9 {
+        grid-column: 1 / 16;
+        padding: 0;
+    }
+
+    .text_right_1 {
+        grid-row: 1;
+    }
+
+    .text_right_2 {
+        grid-row:3;
+    }
+
+    .text_left_3{
+        grid-row:5;
+    }
+
+    .text_right_5 {
+        grid-row: 9;
+    }
+
+    .text_left_7 {
+        grid-row: 13;
+    }
+
+    .text_right_9 {
+        grid-row: 17;
+    }
+
+    .in_text_image_left_1, .in_text_image_left_2, .in_text_image_right_3, .in_text_image_left_5, .in_text_image_right_7, .in_text_image_left_9 {
+        grid-column: 1 / 16;
+        margin: 0%;
+        height: 350px;
+    }
+
+    .in_text_image_left_1 {
+        grid-row: 2;
+    }
+
+    .in_text_image_left_2 {
+        grid-row: 4;
+    }
+
+    .in_text_image_right_3 {
+        grid-row: 6;
+    }
+
+    .in_text_image_left_5 {
+        grid-row: 10;
+    }
+
+    .in_text_image_right_7 {
+        grid-row: 14;
+    }
+
+    .in_text_image_left_9 {
+        grid-row:18;
+    }
+
+    /* Exploration box */
+    .video_size {
+        width: 220px;
+        padding:4%;
+    }
+
+    .vid_text {
+        padding: 4%;
+        grid-column: 1 / span 20;
+        grid-row:2;
+    }
+
+    .links {
+        padding: 5%;
+    }
+
+    /* glOSSARY PAGE */
+    .glossary_list {
+        margin-top:4%;
+        padding: 0;
+    }
+
+    .glossary_list li {
+        padding-left: 0;
+        text-indent: 0;
+    }
+
+    .glos_def {
+        grid-column: 1/span 5;
+        grid-row: 1;
+        margin-right: 0;
+        margin-left: 2%;
+        margin-bottom: 2.5%;
+        text-indent: -1em;
+        padding-left: 1em;
+    }
+
+    .glos_img_cred {
+        grid-column: 1/span 5;
+        grid-row: 2;
+    }
+
+    .glos_img {
+        grid-column: 1/span 5;
+        grid-row: 3;
+        margin: 0;
+        margin-top: 2%;
+        height: 275px;
+    }
+
+    /* FOOTER */
+    .mission {
+        padding: 10%;
+    }
+
+    .creation {
+        padding: 10%;
+    }
+
+}

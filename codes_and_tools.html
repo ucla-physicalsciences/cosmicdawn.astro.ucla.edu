@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="The site is intended as a free educational resource about the frontiers of galaxy formation." />
+    <meta name="keywords" content="furlanetto, research, cosmic dawn, first galaxies, first stars, population 3, cosmology" />
+    <meta name="author" content="Erika Hoffman" />
+
+    <title>Codes and Tools - Furlanetto Research Group</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="images/galaxy_icon_d.png">
+</head>
+<body>
+    <div class="grid_1">
+        <header>
+            <nav class="navbar" style="grid-row:1;">
+                <a href="research.html"><h1 class="main-header">Furlanetto Research Group</h1></a>
+            </nav>
+            <nav class="navbar" style="grid-row:1;">
+                <ul style="padding-top: 27px; ">
+                    <li><a href="research.html"><span class="bold">Research Overview</span></a></li>
+                    <li><a href="group_members.html"><span class="bold">Group Members</span></a></li>
+                    <li><a href="collaborations.html"><span class="bold">Collaborations</span></a></li>
+                    <li class="current"><a href="codes_and_tools.html"><span class="bold">Codes and Tools</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="glos">
+                <ul>
+                    <li>
+                        <! THE DROPDOWN MENU !>
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                                Back to Cosmic Dawn
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="index.html">Home</a>
+                                <a href="dark_ages.html" class="dark_head">The Dark Ages</a>
+                                <a href="big_bang_cmb.html" class="dark_cont">The Big Bang</a>
+                                <a href="cosmic_web.html" class="dark_cont">The Cosmic Web</a>
+                                <a href="exotic_physics.html" class="dark_cont">Exotic Physics</a>
+                                <a href="cosmic_dawn_1.html" class="cd_1_head">Era of the First Stars</a>
+                                <a href="first_stars.html" class="cd_1_cont">The First Stars</a>
+                                <a href="first_black_holes.html" class="cd_1_cont">The First Black Holes</a>
+                                <a href="light_fills_the_universe.html" class="cd_1_cont">Light Fills the Universe</a>
+                                <a href="spin_flip.html" class="cd_1_cont">The Spin-Flip Backgound</a>
+                                <a href="cosmic_dawn_2.html" class="cd_2_head">Era of First Galaxies</a>
+                                <a href="first_galaxies.html" class="cd_2_cont">The First Galaxies</a>
+                                <a href="larger_galaxies.html" class="cd_2_cont">Larger and Larger Galaxies</a>
+                                <a href="epoch_of_reionization.html" class="cd_2_cont">Epoch of Reionization</a>
+                                <a href="later_universe.html" class="later_head">The Later Universe</a>
+                                <a href="cosmic_noon.html" class="later_cont">Galaxies at Cosmic Noon</a>
+                                <a href="our_galaxy.html" class="later_cont">Our Galaxy: The Milky Way</a>
+                                <a href="observations.html" class="obs_head">Obervations Overview</a>
+                                <a href="radio_telescopes.html" class="obs_cont">Radio Telescopes</a>
+                                <a href="lunar_telescopes.html" class="obs_cont">Lunar Radio Telescopes</a>
+                                <a href="space_telescopes.html" class="obs_cont">Space Telescopes</a>
+                                <a href="infrared_telescopes.html" class="obs_cont">Ground-Based Near-Infrared Telescopes</a>
+                                <a href="other_telescopes.html" class="obs_cont">Other Telescopes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Research</button>
+                            <div class="dropdown-content">
+                                <a href="research.html">Research Overview</a>
+                                <a href="group_members.html">Group Members</a>
+                                <a href="collaborations.html">Collaborations</a>
+                                <a href="codes_and_tools.html">Codes and Tools</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="glossary.html" class="dropbtn">Glossary</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+        <! MAIN IMAGE AND TEXT !>
+        <div class="gloss_title" style="margin-bottom:6%;">CODES AND TOOLS</div>
+
+        <! altered grid 1 !>
+        <div class="grid_1">
+            <! MAIN TEXT !>
+            <article class="main-col" style="grid-column: 1 / span 19;">
+
+                <div class="in_text_image_left_2" style="background-image: url('images/galcv.png'); background-size:contain;"></div>
+                <div class="text_right_2">
+                    <h1><a href="https://pypi.org/project/galcv/" target="_blank" rel="noopener noreferrer">galcv</a></h1>
+                    <p>
+                        Adam Trapp developed the galcv package for quick estimates of cosmic variance in high-redshift luminosity functions. You can download it <a href="https://pypi.org/project/galcv/" target="_blank" rel="noopener noreferrer">here</a>.
+
+                    </p>
+                    <p class="img_cred_body">
+
+                    </p>
+                </div>
+
+
+                <div class="in_text_image_right_3" style="background-image: url('images/elecinterp_paper.png'); background-size: contain;"></div>
+                <div class="text_left_3">
+                    <h1><a href="https://ui.adsabs.harvard.edu/abs/2010MNRAS.404.1869F/abstract" target="_blank" rel="noopener noreferrer">elecinterp</a></h1>
+                    <p>
+                        This simple code contains: (1) a set of data tables for the energy deposition by fast electrons in a gas of primordial composition, with the ionized fraction given by the filename, contained in the directory x_int_tables; (2) C code to interpolate these tables (across energy and ionized fraction), elec_interp.c; (3) an example application (again in C) that uses the interpolation code to compute the net deposition fractions for a power law incident spectrum and a variable minimum incident photon energy (matching Fig. 6 in Furlanetto and Stoever), xray_interp.c. You can download it <a href="elec_interp.tar" target="_blank" rel="noopener noreferrer">here</a>. You can read about the physics behind the code in this <a href="https://ui.adsabs.harvard.edu/abs/2010MNRAS.404.1869F/abstract" target="_blank" rel="noopener noreferrer">paper</a>.
+                    </p>
+                    <p class="img_cred_body">
+
+                    </p>
+                </div>
+
+                <div class="in_text_image_left_5" style="background-image:url('images/ares.png'); background-size:contain; "></div>
+                <div class="text_right_5">
+                    <h1><a href="https://ares.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">ARES</a></h1>
+                    <p>
+                        The Accelerated Reionization Era Simulations (ARES) code is a fast tool for rapidly modeling galaxies, radiation backgrounds, the intergalactic medium, and the spin-flip background during the Cosmic Dawn. ARES primarily focuses on computing average quantities and simple statistics. It is available publicly <a href="https://ares.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">here</a>. Jordan Mirocha developed and maintains the code.
+
+                    </p>
+                    <p class="img_cred_body">
+                    </p>
+                </div>
+
+                <div class="in_text_image_right_7" style="background-image: url('images/21cm_fast.png'); background-size: contain;"></div>
+                <div class="text_left_7">
+                    <h1><a href="https://pypi.org/project/21cmFAST/" target="_blank" rel="noopener noreferrer">21cmFAST</a></h1>
+                    <p>
+                        This is a semi-numeric simulation code for predicting galaxy populations, radiation backgrounds, and especially the spin-flip background from early times. The code produces three-dimensional realizations of the Universe during the Cosmic Dawn. It is primarily maintained by Andrei Mesinger, Steven Murray, and their collaborators, but it is available publicly and is constantly being improved. You can find the latest iteration, with a user's guide and documentation, <a href="https://pypi.org/project/21cmFAST/" target="_blank" rel="noopener noreferrer">here</a>.
+                    </p>
+                    <p class="img_cred_body">
+                    </p>
+                </div>
+            </article>
+
+            <! PAGE BEFORE / PAGE AFTER NAVIGATION >
+            <section class="page_nav">
+                <a href="collaborations.html">Previous: Collaborations</a>
+                <a href="" style="float: right;"></a>
+            </section>
+
+        </div>
+
+        <div class="grid_2">
+
+            <div class="mission"><span class="bold">Our Mission:</span> <br />The site is intended as a free educational resource about the frontiers of galaxy formation.</div>
+            <div class="creation">
+                <div class="creation_top">
+                    <span class="bold">Creation and Funding:</span>
+                    <br />Content and supervision by Professor Steven Furlanetto, website design by Erika Hoffman, funding and support from NASA NESS, NSF, & UCLA Physics and Astronomy.
+                </div>
+                <img src="images/nasa_logo.png" class="nasa" />
+                <img src="images/nasa_ness.png" class="ness" />
+                <img src="images/NSF_logo.png" class="nsf" />
+                <img src="images/Bxd_Wht_PhysicsAstronomy_A.svg" class="ucla" />
+            </div>
+            <div class="copyright">
+                Copyright &copy; 2021
+            </div>
+        </div>
+
+</body>
+</html>
